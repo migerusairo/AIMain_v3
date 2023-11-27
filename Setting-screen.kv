@@ -1,0 +1,98 @@
+MDScreen:
+    name: 'Setting-screen'
+    MDFloatLayout:
+        MDIconButton:
+            icon: "icons/back.png"
+            pos_hint: {'center_y': 0.95}
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "Home-screen"
+
+        MDTextButton:
+            text: "Back"
+            font_name: "fonts/PoppinsEL.otf"
+            font_size: "15sp"
+            pos_hint: {"center_x": .15, "center_y": .95}
+            color: rgba(24, 34, 34, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "Home-screen"
+
+        MDLabel:
+            text: "Settings"
+            font_name: "fonts/Poppins.otf"
+            font_size: "18sp"
+            halign: "center"
+            pos_hint: {"center_y": .95}
+            color: rgba(0, 0, 0, 255)
+
+        MDFloatLayout:
+            md_bg_color: "white"
+            size_hint: .9, .1
+            radius: [10]
+            pos_hint: {'center_x': 0.5,'center_y': 0.85}
+            Image:
+                source: "assets/TCUlogo.jpg"
+                size_hint: 0.7, 0.7
+                pos_hint: {'center_x': 0.1,'center_y': 0.5}
+
+            MDTextButton:
+                text: "View Profile"
+                font_size: "12sp"
+                pos_hint: {"center_x": .35,"center_y": .4}
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "Profile-screen"
+
+            MDIconButton:
+                icon: "icons/next.png"
+                pos_hint: {'center_x': 0.95,'center_y': 0.5}
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "Profile-screen"
+
+        MDFloatLayout:
+            md_bg_color: "white"
+            size_hint: .9, .1
+            radius: [10]
+            pos_hint: {'center_x': 0.5,'center_y': 0.74}
+
+            MDTextButton:
+                text: "Terms & Agreement"
+                font_size: "12sp"
+                font_name: "fonts/OpenSans-Semibold.ttf"
+                pos_hint: {"center_x": .25,"center_y": .5}
+                on_release:
+                    app.terms_condition()
+
+        MDFloatLayout:
+            md_bg_color: "white"
+            size_hint: .9, .1
+            radius: [10]
+            pos_hint: {'center_x': 0.5,'center_y': 0.63}
+
+            MDTextButton:
+                text: "About us"
+                font_size: "12sp"
+                font_name: "fonts/OpenSans-Semibold.ttf"
+                pos_hint: {"center_x": .15,"center_y": .5}
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "About"
+
+        Button:
+            text: "Logout"
+            size_hint: .8, .06
+            pos_hint: {"center_x": .5, "center_y": .53}
+            background_color: 0, 0, 0, 0
+            font_name: "fonts/OpenSans-Bold.ttf"
+            on_release:
+                app.user_logout()
+            canvas.before:
+                Color:
+                    rgb: rgba(255, 0, 0, 255)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [10]
+

@@ -1,0 +1,294 @@
+MDScreen:
+    name: "Register"
+    Carousel:
+        id: carousel
+        on_current_slide: app.current_slide(self.index)
+        MDFloatLayout:
+
+            MDIconButton:
+                icon: "icons/back.png"
+                pos_hint: {'center_y': 0.95}
+                on_release:
+                    root.manager.transition.direction = "right"
+                    root.manager.current = "Login"
+
+            MDLabel:
+                text: "W E L C O M E ! , "
+                font_name: "fonts/Poppins.otf"
+                font_size: "30sp"
+                pos_hint: {"center_x": .6, "center_y": .85}
+                color: rgba(24, 34, 34, 255)
+
+            MDLabel:
+                text: "T C U n i s t a . "
+                font_name: "fonts/Poppins.otf"
+                font_size: "20sp"
+                pos_hint: {"center_x": .6, "center_y": .79}
+                color: rgba(255, 0, 0, 255)
+
+            MDLabel:
+                text: "Create New Account."
+                font_name: "fonts/PoppinsEL.otf"
+                font_size: "14sp"
+                pos_hint: {"center_x": .6, "center_y": .7}
+                color: rgba(135, 135, 135, 255)
+
+            MDFloatLayout:
+                Image:
+                    source: "assets/TCUlogo.jpg"
+                    size_hint: .3,.3
+                    pos_hint: {'center_x': 0.71,'center_y': .75}
+
+            MDFloatLayout:
+                pos_hint: {"center_y": .4}
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .73}
+                    TextInput:
+                        id: stud_id
+                        hint_text: "Student ID"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .65}
+                    TextInput:
+                        id: fname
+                        hint_text: "First Name"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .57}
+                    TextInput:
+                        id: lname
+                        hint_text: "Last name"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .49}
+                    TextInput:
+                        id: year
+                        hint_text: "Year"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .41}
+                    TextInput:
+                        id: course
+                        hint_text: "Course"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+                MDFloatLayout:
+                    size_hint: .7, .07
+                    pos_hint: {"center_x": .5, "center_y": .33}
+                    TextInput:
+                        id: section
+                        hint_text: "Section"
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        size_hint_y: .75
+                        pos_hint: {'center_x': .43,'center_y': 0.25}
+                        background_color: 1, 1, 1, 0
+                        foreground_color: rgba(0, 0, 59, 255)
+                        cursor_color: rgba(0, 0, 59, 255)
+                        font_size: "14sp"
+                        cursor_width: "2sp"
+                        multiline: False
+                    MDFloatLayout:
+                        pos_hint: {"center_x": .45, "center_y": 0}
+                        size_hint_y: .03
+                        md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+        MDFloatLayout:
+            MDLabel:
+                text: "S I G N  U P ! , "
+                font_name: "fonts/Poppins.otf"
+                font_size: "30sp"
+                pos_hint: {"center_x": .6, "center_y": .85}
+                color: rgba(24, 34, 34, 255)
+
+            MDLabel:
+                text: "A C C O U N T . "
+                font_name: "fonts/Poppins.otf"
+                font_size: "20sp"
+                pos_hint: {"center_x": .6, "center_y": .79}
+                color: rgba(255, 0, 0, 255)
+
+            MDLabel:
+                text: "Create New Account."
+                font_name: "fonts/PoppinsEL.otf"
+                font_size: "14sp"
+                pos_hint: {"center_x": .6, "center_y": .7}
+                color: rgba(135, 135, 135, 255)
+
+            MDFloatLayout:
+                size_hint: .7, .07
+                pos_hint: {"center_x": .5, "center_y": .64}
+                TextInput:
+                    id: email
+                    hint_text: "Email"
+                    font_name: "fonts/OpenSans-Bold.ttf"
+                    size_hint_y: .75
+                    pos_hint: {'center_x': .43,'center_y': 0.25}
+                    background_color: 1, 1, 1, 0
+                    foreground_color: rgba(0, 0, 59, 255)
+                    cursor_color: rgba(0, 0, 59, 255)
+                    font_size: "14sp"
+                    cursor_width: "2sp"
+                    multiline: False
+                MDFloatLayout:
+                    pos_hint: {"center_x": .45, "center_y": 0}
+                    size_hint_y: .03
+                    md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+            MDFloatLayout:
+                size_hint: .7, .07
+                pos_hint: {"center_x": .5, "center_y": .56}
+                TextInput:
+                    id: password
+                    hint_text: "Password"
+                    font_name: "fonts/OpenSans-Bold.ttf"
+                    size_hint_y: .75
+                    pos_hint: {'center_x': .43,'center_y': 0.25}
+                    background_color: 1, 1, 1, 0
+                    foreground_color: rgba(0, 0, 59, 255)
+                    cursor_color: rgba(0, 0, 59, 255)
+                    font_size: "14sp"
+                    cursor_width: "2sp"
+                    multiline: False
+                    password: True
+                MDFloatLayout:
+                    pos_hint: {"center_x": .45, "center_y": 0}
+                    size_hint_y: .03
+                    md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+            MDFloatLayout:
+                size_hint: .7, .07
+                pos_hint: {"center_x": .5, "center_y": .48}
+                TextInput:
+                    id: confirmpassword
+                    hint_text: "Confirm Password"
+                    font_name: "fonts/OpenSans-Bold.ttf"
+                    size_hint_y: .75
+                    pos_hint: {'center_x': .43,'center_y': 0.25}
+                    background_color: 1, 1, 1, 0
+                    foreground_color: rgba(0, 0, 59, 255)
+                    cursor_color: rgba(0, 0, 59, 255)
+                    font_size: "14sp"
+                    cursor_width: "2sp"
+                    multiline: False
+                    password: True
+
+                MDFloatLayout:
+                    pos_hint: {"center_x": .45, "center_y": 0}
+                    size_hint_y: .03
+                    md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+            MDFloatLayout:
+                Button:
+                    text: "Sign Up "
+                    size_hint: .5, .06
+                    pos_hint: {"center_x": .5, "center_y": .10}
+                    background_color: 0, 0, 0, 0
+                    font_name: "fonts/OpenSans-Bold.ttf"
+                    on_release:
+                        app.register(email.text, password.text,confirmpassword.text, fname.text, lname.text, stud_id.text, year.text, course.text, section.text)
+                    canvas.before:
+                        Color:
+                            rgb: rgba(1, 0, 0, 255)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10]
+
+                MDFloatLayout:
+                    halign: "center"
+                    MDCheckbox:
+                        id: checkbox
+                        size_hint: None, None
+                        size: "48dp", "48dp"
+                        pos_hint: {"center_x": .15, "center_y": .4}
+
+                    MDTextButton:
+                        text: "I read and agree [u]Terms & Condition[/u]"
+                        markup: True
+                        font_name: "fonts/OpenSans-Bold.ttf"
+                        font_size: "10sp"
+                        pos_hint: {"center_x": .5, "center_y": .4}
+                        on_release:
+                            app.terms_condition()
+    MDLabel:
+        id: slide0
+        text:"."
+        color: rgba(253, 0, 0, 255)
+        pos_hint: {"center_x": .97, "center_y": .07}
+        font_size: "80sp"
+
+    MDLabel:
+        id: slide1
+        text:"."
+        color: rgba(170, 170, 170, 255)
+        pos_hint: {"center_x": 1.03, "center_y": .07}
+        font_size: "80sp"

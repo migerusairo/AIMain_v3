@@ -1,0 +1,109 @@
+MDScreen:
+    name: 'Adminhome2'
+
+    MDFloatLayout:
+        MDIconButton:
+            icon: "icons/back.png"
+            pos_hint: {'center_y': 0.95}
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "Adminhome"
+
+        MDTextButton:
+            text: "Back"
+            font_name: "fonts/PoppinsEL.otf"
+            font_size: "15sp"
+            pos_hint: {"center_x": .15, "center_y": .95}
+            color: rgba(24, 34, 34, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "Adminhome"
+
+        MDLabel:
+            text: "Create post"
+            font_name: "fonts/Poppins.otf"
+            font_size: "18sp"
+            halign: "center"
+            pos_hint: {"center_y": .95}
+            color: rgba(0, 0, 0, 255)
+
+    MDFloatLayout:
+        MDLabel:
+            text: "Upload Photo"
+            font_name: "fonts/OpenSans-Bold.ttf"
+            pos_hint: {'center_x': .8, 'center_y': .75}
+            font_size: "18sp"
+
+    MDFloatLayout:
+        MDLabel:
+            text: "Title Heading"
+            font_name: "fonts/OpenSans-Bold.ttf"
+            pos_hint: {'center_x': .6, 'center_y': .5}
+            font_size: "14sp"
+
+    MDFloatLayout:
+        size_hint: .8, .1
+        pos_hint: {"center_x": .5, "center_y": .45}
+        TextInput:
+            id: content_title
+            hint_text: "Title"
+            font_name: "fonts/OpenSans-Semibold.ttf"
+            size_hint_y: .75
+            pos_hint: {'center_x': .5,'center_y': 0.25}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "18sp"
+            cursor_width: "2sp"
+            multiline: False
+        MDFloatLayout:
+            pos_hint: {"center_x": .5, "center_y": 0}
+            size_hint_y: .03
+            md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+    MDFloatLayout:
+        MDLabel:
+            text: "Label"
+            font_name: "fonts/OpenSans-Bold.ttf"
+            pos_hint: {'center_x': .6, 'center_y': .35}
+            font_size: "14sp"
+
+    MDFloatLayout:
+        size_hint: .8, .3
+        pos_hint: {"center_x": .5, "center_y": .3}
+        TextInput:
+            id: content_label
+            hint_text: "content label"
+            font_name: "fonts/OpenSans-Semibold.ttf"
+            size_hint_y: .75
+            pos_hint: {'center_x': .5,'center_y': 0.25}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "14sp"
+            cursor_width: "2sp"
+            multiline: True
+        MDFloatLayout:
+            pos_hint: {"center_x": .5, "center_y": 0}
+            size_hint_y: .01
+            md_bg_color: 178/255, 178/255, 178/255, 255/255
+
+    MDFloatLayout:
+        Button:
+            text: "Upload"
+            halign: "center"
+            size_hint: .4, .06
+            pos_hint: {"center_x": .7, "center_y": .10}
+            background_color: 0, 0, 0, 0
+            font_name: "fonts/OpenSans-Bold.ttf"
+
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "Adminhome2"
+            canvas.before:
+                Color:
+                    rgb: rgba(0, 0, 0, 255)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [10]
